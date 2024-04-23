@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "adduser";
+}
+@model project.Models.Models.Vm_User;
+
+<form action="/login/register" method="post" >
+    <label for="">name :</label>
+    <input required class="form-control"  asp-for="Vm_Name" type="text">
+    <br><label for="">phone :</label>
+    <input required class="form-control"  asp-for="Vm_Phone" type="text">
+    <br><label for="">email :</label>
+    <input required class="form-control"  asp-for="Vm_Email" type="email">
+    <br><label for="">password :</label>
+    <input required class="form-control"  asp-for="Vm_Password" type="password">
+    <br><label for="">repassword :</label>
+    <input required class="form-control"  asp-for="Vm_RePassword" type="password">
+    <br>
+    <button class="btn btn-sm btn-block btn-success" type="submit">add user</button>
+</form>

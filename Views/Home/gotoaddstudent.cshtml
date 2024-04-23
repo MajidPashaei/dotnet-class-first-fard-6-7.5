@@ -1,0 +1,17 @@
+@model project.Models.Models.Vm_Student;
+<form action="/home/addstudent" method="post">
+    <label >شماره تماس</label>
+    <input asp-for="Vm_Phone" type="text" class="form-control"  placeholder="شماره تماس">
+
+    <label >نام</label>
+    <input asp-for="Vm_Name" type="text" class="form-control"  placeholder="نام">
+
+    <label >فامیلی</label>
+    <input asp-for="Vm_Family" type="text" class="form-control"  placeholder="فامیلی">
+
+    <label >شماره کلاس</label>
+    <input asp-for="Vm_ClassCode" type="number" class="form-control"  placeholder="شماره کلاس">
+
+ 
+  <button type="submit" class="btn btn-primary">اضافه کردن دانش آموز</button>
+</form>

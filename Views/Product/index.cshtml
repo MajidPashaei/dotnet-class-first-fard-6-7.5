@@ -1,0 +1,62 @@
+<h1>جدول محصولات</h1>
+
+<a class="btn btn-sm btn-success" href="/product/gotoaddproduct">add product</a>
+<br>
+<hr>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>name</th>
+            <th>color</th>
+            <th>image</th>
+            <th>count</th>
+            <th>price</th>
+            <th>status</th>
+            <th>function</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(ViewBag.p != null)
+        {
+            foreach(var item in ViewBag.p)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Color</td>
+                    <td>
+                        <img src="@item.Image" width="60px" alt="">
+                    </td>
+                    <td>@item.Count</td>
+                    <td>@item.Price</td>
+                    <td>
+                        @if(@item.Status == true)
+                        {
+                            <a href="/product/status/@item.Id" class="btn btn-success">فعال</a>
+                        }
+                        @if(@item.Status == false)
+                        {
+                            <a href="/product/status/@item.Id" class="btn btn-danger">غیر فعال</a>
+
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-sm btn-danger" href="/product/delete/@item.Id">delete</a>
+                        <a class="btn btn-sm btn-warning" href="/product/gotoupdate/@item.Id">update</a>
+                    </td>
+                </tr>
+            }
+        }
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>name</th>
+            <th>color</th>
+            <th>image</th>
+            <th>count</th>
+            <th>price</th>
+            <th>status</th>
+            <th>function</th>
+        </tr>
+    </tfoot>
+</table>

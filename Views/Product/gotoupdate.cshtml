@@ -1,0 +1,28 @@
+@model project.Models.Models.Vm_Product;
+<form action="/product/update" method="post" enctype="multipart/form-data">
+    <label for="">name :</label>
+    <input required class="form-control"  asp-for="Vm_Name" type="text">
+    <br>
+    <label  for="">Color :</label>
+    <input required class="form-control" asp-for="Vm_Color" type="color">
+    <br>
+    <label for="">Count :</label>
+    <input required class="form-control" asp-for="Vm_Count" type="number">
+    <br>
+    <label for="">Price :</label>
+    <input required class="form-control" asp-for="Vm_Price" type="number">
+    <br>
+    <p>درصورت عدم انتخاب عکس عکس زیری باقی میماند</p>
+    <img src="@Model.Vm_Image" width="50px" alt="">
+    <label for="">Image :</label>
+    <input class="form-control" asp-for="Vm_IMG" type="file">
+    <br>
+    <label for="">status :</label>
+    <select required class="form-control" asp-for="Vm_Status" >
+        <option value="true">show</option>
+        <option value="false">hidden</option>
+    </select>
+    <br>
+    <input type="text" hidden asp-for="Vm_Id">
+    <button class="btn btn-sm btn-block btn-success" type="submit">upadte product</button>
+</form>

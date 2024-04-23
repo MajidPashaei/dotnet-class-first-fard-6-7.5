@@ -1,0 +1,24 @@
+
+<h1>list students</h1>
+<a href="/home/gotoaddstudent">اضافه کردن</a>
+<hr>
+<table class="table table-light">
+    <tr>
+        <th>نام</th>
+        <th>فامیلی</th>
+        <th>شماره کلاس</th>
+        <th>شماره تماس</th>
+    </tr>
+    @if(ViewBag.st != null)
+    {
+        foreach (var item in ViewBag.st)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Family</td>
+                <td>@item.ClassCode</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+    }
+</table>

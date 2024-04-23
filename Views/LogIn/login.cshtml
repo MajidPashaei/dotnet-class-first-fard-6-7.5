@@ -1,0 +1,11 @@
+
+@model project.Models.Models.Vm_User;
+
+<form action="/login/check" method="post" >
+    <label for="">email :</label>
+    <input required class="form-control"  asp-for="Vm_Email" type="email">
+    <br><label for="">password :</label>
+    <input required class="form-control"  asp-for="Vm_Password" type="password">
+    
+    <button class="btn btn-sm btn-block btn-success" type="submit">login</button>
+</form>
